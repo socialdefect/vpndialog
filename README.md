@@ -13,5 +13,37 @@ Make sure you install these programs before running the script.
 	* unzip
 
 
+Installation:
+
+There is no need to install the script for it can run from any directory.
+If you want to install it here is how to do it:
+
+	* Download the script using git
+	* Copy it to a bin directory in your PATH
+	* Make sure it is executable
+
+Commands to do this:
+
+	cd /usr/src
+	git clone https://github.com/socialdefect/vpndialog.git
+	cd vpndialog
+	chmod +x vpndialog.sh
+	ln -s `pwd`/vpndialog.git /usr/bin/vpndialog
+
+	this way the script is linked from it's git directory so if
+	you run "git pull" in that directory it will pull any updates
+	into that directory so there is no need to copy the script again
+	when pulling an updated version.
+
+	If you don't like plain scripts in your bin directory you can use 
+	SHC to wrap it in a C file and build a binary.
+
+	Command example:
+
+	shc -f vpndialog.sh
+
+	Or run: "shc --help" to check out more advanced options.
+
+
 
 ##### By Arjan van Lent 2015, License GPLv3 ###########

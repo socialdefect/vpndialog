@@ -1,5 +1,21 @@
 #!/bin/bash
 
+if [ `whoami` != 'root' ] ; then
+	echo 'You need superuser privileges to run openvpn.'
+	echo 'Try executing using "sudo".'
+	exit 1
+fi
+
+for i in openvpn wget dialog unzip ; do
+	if [ ! -f `which $i` ] ; then
+		DEPS="$i 
+		$DEPS"
+		echo ; echo 'You need to install the following software
+		before you can continue!:'
+		echo "$DEPS"
+		exit 1
+	fi
+
 NoConfig(){
 	dialog --no-label "Exit" --yes-label "Get free vpnbook config" --yesno "Cannot find any configuration files.\
                 please copy your vpn config to ~/.openvpn \

@@ -46,4 +46,22 @@ Commands to do this:
 
 
 
+Changelog:
+
+	## v0.2 ##
+		* Fixed all previous bugs
+		* Included lots of improvements to the code
+		* Included Config Restore feature
+		* Included Network Connection Test
+		* Included open config in filemanager function
+
+TODO:
+	## v0.3 ##
+		* Include UI window for download progress
+		* Include UI window for vpn login and status messages
+
+
+
+
+
 ##### By Arjan van Lent 2015, License GPLv3 ###########
